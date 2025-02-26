@@ -27,23 +27,22 @@ struct acc {
 // Classe pour le jeu de ping-pong
 class jeu_ping_pong {
 public:
-    int j_a = 0;
-    int j_b = 0;
-    int score_a = 0;
-    int score_b = 0;
-    int serveur = 0;
+    int joueur_a;
+    int joueur_b;
+    int score_a;
+    int score_b;
+    int serveur;
 };
 
 // Classe représentant la table de ping-pong
 class table {
-public:
-    static constexpr float LARGEUR = 183.0f;
-    static constexpr float LONGUEUR = 274.0f;
-    coo centre_table;
-
-    table();
-    void sayHello() const;
-};
+    public:
+        static constexpr float LARGEUR = 183.0f;   // cm
+        static constexpr float LONGUEUR = 274.0f; // cm
+        coo centre_table;
+        table();
+    };
+    
 
 // Classe pour la météo
 class meteo {
@@ -57,8 +56,8 @@ public:
 // Classe pour le filet
 class filet {
 public:
-    static constexpr float HAUTEUR = 15.25f;
-    static constexpr float LARGEUR = 183.0f;
+    const float HAUTEUR = 15.25;
+    const int LARGEUR = 183;
     coo centre_filet;
 
     filet();
@@ -67,8 +66,8 @@ public:
 // Classe pour la raquette
 class raquette {
 public:
-    static constexpr float LARGEUR = 15.0f;
-    static constexpr float HAUTEUR = 25.0f;
+    const int LARGEUR = 15;
+    const int HAUTEUR = 25;
     coo centre_raquette;
     vitesse vitesse_raquette;
 
@@ -79,8 +78,8 @@ public:
 // Classe pour la balle
 class balle {
 public:
-    static constexpr float RAYON = 2.0f;
-    static constexpr float GRAVITY = 9.81f;
+    static constexpr int RAYON = 2;
+    const float GRAVITY = 9.81;
 
 private:
     coo centre_balle;

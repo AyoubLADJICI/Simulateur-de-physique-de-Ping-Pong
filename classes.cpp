@@ -16,9 +16,6 @@ string acc::toString() const {
 // Implémentation de la table
 table::table() : centre_table{0, 0, 0} {}
 
-void table::sayHello() const {
-    cout << "Bienvenue sur la table de Ping-Pong !" << endl;
-}
 
 // Implémentation de la météo
 meteo::meteo(float vent, float sens) : norme_vent(vent), sens_vent(sens) {}
